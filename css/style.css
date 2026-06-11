@@ -21,7 +21,7 @@
     --pri:#202124;
     --sec:#191a1c;
     --tri1:#2a2b2e;
-    --tri2:#ECEBDE;
+    --tri2:#000;
 }
 
 *{
@@ -33,7 +33,7 @@
 body,html{
     width: 100%;
     height: 100%;  
-    background: var(--sec);
+    background: var(--tri2);
 }
 
 .main{
