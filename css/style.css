@@ -1,3 +1,5 @@
+@import url("sections/todoPage.css");
+
 @font-face{
     font-family: inter;
     font-weight: 300;
@@ -14,20 +16,12 @@
     src: url(/fonts/InterTight-Bold.ttf);
 }
 
+
 :root{
-    --pri:#A59D84;
-    --sec:#C1BAA1;
-    --tri1:#D7D3BF;
+    --pri:#202124;
+    --sec:#191a1c;
+    --tri1:#2a2b2e;
     --tri2:#ECEBDE;
-
-    --black-200: #1c1c1c;
-    --black-300: #333333;
-    --black-400: #1f1e31;
-    --black-500: #555555;
-    --gray-100: #888888;
-
-  --color-white: #fff;
-  --color-creamson: #fff0de;
 }
 
 *{
@@ -37,23 +31,25 @@
 }
 
 body,html{
-    max-width: 1280px;
-    margin: 0 auto;
-    background: var(--black-200);
+    width: 100%;
+    height: 100%;  
+    background: var(--sec);
 }
 
 .main{
-    width: 100%;
+    max-width: 1280px;
     height: 100%;
-
+    margin: 0 auto;
+    position: relative;
 }
 
-.allCards{
+section.allCards{
+    width: 100%;
     display: flex;
     flex: 1;
     gap: 18px;
     flex-direction: row;
-    margin: 10px 0;
+    padding-top: 10px;
     flex-wrap: wrap;
 }
 
@@ -65,17 +61,17 @@ body,html{
     height: 400px;
     border-radius: 24px;
     position: relative;
+    transition: all ease-in 0.2s;
 }
 
 .moti{
-    color: var(--tri2);
+    color: #f6f8ee;
 }
 
 .card img{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    
 }
 
 .card h3{
@@ -84,3 +80,39 @@ body,html{
     bottom: 6%;
 }
 
+.card:active{
+    scale: 0.97;
+}
+
+section.cardPage{
+    font-family: inter;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 40px;
+    background-color: var(--pri);
+    display: none;
+    position: absolute;
+    border-radius: 24px;
+}
+
+.close-btn{
+    font-family: inter;
+    background-color: red;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border: none;
+    width: 100px;
+    height: 42px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.close-btn:active{
+    scale: 0.97;
+}
