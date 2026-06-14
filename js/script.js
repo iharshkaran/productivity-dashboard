@@ -18,19 +18,20 @@ function openFeatures() {
 
 openFeatures()
 
+
 let form = document.querySelector(".addTask form");
 let task = document.querySelector(".addTask form .input");
 let taskDetail = document.querySelector(".addTask form textarea");
 let taskCheck = document.querySelector(".addTask form #check");
 
-let inputTask = {}
+var currentTask = []
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     currentTask.push(
         {
-            task: `${task.value}`,
-            details: `${taskDetail.value}`,
+            task: task.value,
+            details: taskDetail.value,
             imp: taskCheck.checked
         }
     )
@@ -38,35 +39,39 @@ form.addEventListener("submit", function (e) {
     task.value = ''
     taskDetail.value = ''
     taskCheck.checked = false
-
+    
     renderTask()
 })
 
-var currentTask = [
-    {
-        task: "GYM Jao",
-        details: "Body Strong karnee ka lya",
-        imp: true
-    },
-    {
-        task: "Skill Sikho",
-        details: "Money Earn karnee ka lya",
-        imp: true
-    },
-]
 
-let allTask = document.querySelector(".allTask")
+if(localStorage.getItem("currentTask")){
+    currentTask = JSON.parse(localStorage.getItem("currentTask"));
+} else {
+    console.log("LocalStorge is Emplty lol :) ");
+}
+
+
 function renderTask() {
+    localStorage.setItem("currentTask", JSON.stringify(currentTask));
+    let allTask = document.querySelector(".allTask")
     var sum = ''
 
-    currentTask.forEach(function (tasks) {
+    currentTask.forEach(function (tasks,idx) {
         sum += `<div class="task">
               <h5>${tasks.task}<span class="${tasks.imp}">imp</span></h5>
-              <button>Mark as Completed</button>
+              <button id=${idx}>Mark as Completed</button>
             </div>`
     })
 
     allTask.innerHTML = sum;
+
+    // for Delete tasks
+    document.querySelectorAll(".task button").forEach((btn)=>{
+        btn.addEventListener("click", ()=>{
+            currentTask.splice(btn.id,1);
+            renderTask()
+        })
+    })
 }
 
 renderTask()
