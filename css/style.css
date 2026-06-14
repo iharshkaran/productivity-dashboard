@@ -93,23 +93,24 @@ section.cardPage{
     color: #fff;
     padding: 40px;
     background-color: var(--pri);
-    display: none;
+    
     position: absolute;
     border-radius: 24px;
 }
 
 .close-btn{
+    padding: 10px 20px ;
     font-family: inter;
-    background-color: red;
+    background: #b31217;
     position: absolute;
     right: 5%;
     top: 5%;
     border: none;
     width: 100px;
     height: 42px;
-    border-radius: 12px;
+    border-radius: 14px;
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
 }
 

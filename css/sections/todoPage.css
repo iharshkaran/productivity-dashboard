@@ -1,5 +1,6 @@
 section.todo-page{
-
+    display: block;
+    z-index: 7;
 }
 
 .todo-container{
@@ -7,6 +8,7 @@ section.todo-page{
     height: 80%;
     margin-top: 68px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -15,6 +17,79 @@ section.todo-page{
     height: 100%;
     background: var(--sec);
     border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    overflow: auto;
+}
+
+.todo-container .addTask form .input{
+    width: 100%;
+    height: 54px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--tri1);
+    color: #fff;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10% 20px;
+    margin-bottom: 24px;
+}
+
+.todo-container .addTask form textarea{
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-radius: 12px 12px 0px 0px;
+    background-color: var(--tri1);
+    color: #fff;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    resize: none;
+    overflow: hidden;
+}
+
+.todo-container .addTask form div.checkbox{
+    background: var(--tri1);
+    border-radius: 0px 0px 8px 8px;
+    height: 36px;
+    width: 100%;
+    margin-bottom: 16px;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    justify-self: right;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 10px 20px;
+}
+
+.todo-container .addTask form input#check{
+    height: 25px;
+}
+
+.todo-container .addTask form button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #e43a15 0%, #e65245 51%, #e43a15 100%);
+    color: #ffffff;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    transition: all ease 0.2s;
+}
+
+.todo-container .addTask form button:active{
+    scale: 0.97;
 }
 
 .todo-container .allTask{
@@ -22,4 +97,56 @@ section.todo-page{
     height: 100%;
     background: var(--sec);
     border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.todo-container .allTask .task{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--tri1);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+}
+
+.todo-container .allTask .task h5{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px; 
+    display: flex;
+    gap: 6px;
+}
+
+.task h5 span.true{
+    background-color: red;
+    font-size: 8px;
+    padding: 3px 6px;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+.task h5 span.false{
+    opacity: 0;
+}
+
+.todo-container .allTask .task button{
+    background-color:green;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 18px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: all ease 0.2s;
+}
+
+.todo-container .allTask .task button:active{
+    scale: 0.97;
 }
