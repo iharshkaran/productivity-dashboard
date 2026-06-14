@@ -1,90 +1,96 @@
 @import url("sections/todoPage.css");
+@import url("sections/dailyPlannerPage.css");
 
-@font-face{
+@font-face {
     font-family: inter;
     font-weight: 300;
     src: url(/fonts/InterTight-Light.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: inter;
     font-weight: 500;
     src: url(/fonts/InterTight-Regular.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: inter;
     font-weight: 700;
     src: url(/fonts/InterTight-Bold.ttf);
 }
 
 
-:root{
-    --pri:#202124;
-    --sec:#191a1c;
-    --tri1:#2a2b2e;
-    --tri2:#000;
+:root {
+    --pri: #202124;
+    --sec: #191a1c;
+    --tri1: #2a2b2e;
+    --tri2: #000;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
-body,html{
+body,
+html {
     width: 100%;
-    height: 100%;  
-    background: var(--tri2);
+    height: 100%;
+    background-image: radial-gradient(#444444 1px, #000 1px);
+    background-size: 10px 10px;
 }
 
-.main{
-    max-width: 1280px;
+.main {
+    max-width: 900px;
     height: 100%;
     margin: 0 auto;
     position: relative;
+
 }
 
-section.allCards{
+section.allCards {
     width: 100%;
-    display: flex;
-    flex: 1;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     flex-direction: row;
-    padding-top: 10px;
+    padding: 10px;
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     overflow: hidden;
     font-family: inter;
     background: var(--pri);
-    width: 240px;
-    height: 400px;
+
+    height: 320px;
     border-radius: 24px;
     position: relative;
     transition: all ease-in 0.2s;
 }
 
-.moti{
+.moti {
     color: #f6f8ee;
 }
 
-.card img{
+.card img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.card h3{
+.card h3 {
     position: absolute;
     right: 10%;
     bottom: 6%;
 }
 
-.card:active{
+.card:active {
     scale: 0.97;
 }
 
-section.cardPage{
+section.cardPage {
     font-family: inter;
     top: 0%;
     left: 0%;
@@ -98,8 +104,8 @@ section.cardPage{
     border-radius: 24px;
 }
 
-.close-btn{
-    padding: 10px 20px ;
+.close-btn {
+    padding: 10px 20px;
     font-family: inter;
     background: #b31217;
     position: absolute;
@@ -114,6 +120,64 @@ section.cardPage{
     cursor: pointer;
 }
 
-.close-btn:active{
+.close-btn:active {
     scale: 0.97;
+}
+
+.nav {
+    font-family: inter;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    color: #ffffff;
+}
+
+.circle {
+    height: 80px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    justify-content: space-evenly;
+}
+
+.circle1 {
+    background-color: #fff;
+    border: 2px black solid;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    color: #000;
+}
+
+.circle2 {
+    background-color: #fff;
+    border: 2px rgb(255, 255, 255) solid;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.circle2 img{
+    width: 37px;
+    height: 37px;
+    justify-self: center;
+    align-self: center;
+}
+
+.hero {
+    padding: 24px;
+    width: 97.6%;
+    height: 230px;
+    background: var(--tri1);
+    border-radius: 24px;
+    margin: 20px 10px;
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
 }

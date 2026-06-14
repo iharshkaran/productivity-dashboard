@@ -19,59 +19,63 @@ function openFeatures() {
 openFeatures()
 
 
-let form = document.querySelector(".addTask form");
-let task = document.querySelector(".addTask form .input");
-let taskDetail = document.querySelector(".addTask form textarea");
-let taskCheck = document.querySelector(".addTask form #check");
+function todoList() {
+    let form = document.querySelector(".addTask form");
+    let task = document.querySelector(".addTask form .input");
+    let taskDetail = document.querySelector(".addTask form textarea");
+    let taskCheck = document.querySelector(".addTask form #check");
 
-var currentTask = []
+    var currentTask = []
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    currentTask.push(
-        {
-            task: task.value,
-            details: taskDetail.value,
-            imp: taskCheck.checked
-        }
-    )
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        currentTask.push(
+            {
+                task: task.value,
+                details: taskDetail.value,
+                imp: taskCheck.checked
+            }
+        )
 
-    task.value = ''
-    taskDetail.value = ''
-    taskCheck.checked = false
-    
-    renderTask()
-})
+        task.value = ''
+        taskDetail.value = ''
+        taskCheck.checked = false
 
-
-if(localStorage.getItem("currentTask")){
-    currentTask = JSON.parse(localStorage.getItem("currentTask"));
-} else {
-    console.log("LocalStorge is Emplty lol :) ");
-}
+        renderTask()
+    })
 
 
-function renderTask() {
-    localStorage.setItem("currentTask", JSON.stringify(currentTask));
-    let allTask = document.querySelector(".allTask")
-    var sum = ''
+    if (localStorage.getItem("currentTask")) {
+        currentTask = JSON.parse(localStorage.getItem("currentTask"));
+    } else {
+        console.log("LocalStorge is Emplty lol :) ");
+    }
 
-    currentTask.forEach(function (tasks,idx) {
-        sum += `<div class="task">
+
+    function renderTask() {
+        localStorage.setItem("currentTask", JSON.stringify(currentTask));
+        let allTask = document.querySelector(".allTask")
+        var sum = ''
+
+        currentTask.forEach(function (tasks, idx) {
+            sum += `<div class="task">
               <h5>${tasks.task}<span class="${tasks.imp}">imp</span></h5>
               <button id=${idx}>Mark as Completed</button>
             </div>`
-    })
-
-    allTask.innerHTML = sum;
-
-    // for Delete tasks
-    document.querySelectorAll(".task button").forEach((btn)=>{
-        btn.addEventListener("click", ()=>{
-            currentTask.splice(btn.id,1);
-            renderTask()
         })
-    })
+
+        allTask.innerHTML = sum;
+
+        // for Delete tasks
+        document.querySelectorAll(".task button").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                currentTask.splice(btn.id, 1);
+                renderTask()
+            })
+        })
+    }
+
+    renderTask()
 }
 
-renderTask()
+todoList()
