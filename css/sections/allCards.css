@@ -42,33 +42,43 @@ section.allCards {
 }
 
 section.cardPage {
-    font-family: inter;
-    top: 0%;
+    top: 2.5%;
     left: 0%;
     width: 100%;
-    height: 100%;
+    height: 95%;
+    
+    font-family: inter;
     color: #fff;
-    padding: 40px;
-    background-color: var(--pri);
+    background-color: rgb(10, 10, 10);
+    box-shadow: 4px 0px 0px #1e1e1e, -4px 0px 0px #1e1e1e;
+    
+    padding: 36px;
     display: none;
     position: absolute;
-    border-radius: 24px;
+    border-radius: 12px;
 }
 
 .close-btn {
-    padding: 10px 20px;
+    padding: 5px 20px 5px 18px;
     font-family: inter;
-    background: #b31217;
-    position: absolute;
+    font-weight: 500;
+
+    color: #fff;
+    background-image: linear-gradient(to right, #dc0000,#af0000);
+
     right: 5%;
     top: 5%;
-    border: none;
     width: 100px;
-    height: 42px;
-    border-radius: 14px;
-    color: #fff;
+    height: 36px;
+
+    border-radius: 10px;
     font-size: 20px;
+
+    position: absolute;
+    border: none;
     cursor: pointer;
+
+    transition: all ease 0.2s;
 }
 
 .close-btn:active {
