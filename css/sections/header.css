@@ -1,0 +1,63 @@
+.nav {
+    height: 14%;
+    width: 100%;
+
+    padding-left: 3px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1{
+    font-family: inter;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgb(117, 117, 117);
+}
+
+.nav .circleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3px;
+
+    height: 100%;
+    width: 11%;
+}
+
+.circle1,
+.circle2 {
+    color: #000;
+    background-color: #ffffffeb;
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+    border-radius: 50px;
+
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+.circle1:hover,
+.circle2:hover {
+    opacity: 0.8; 
+}
+
+.circle1:active,
+.circle2:active {
+    scale: 0.97; 
+}
+
+.circle1 img,
+.circle2 img{
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    top: 10%;
+    left: 10.5%;
+}
