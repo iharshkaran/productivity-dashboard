@@ -59,19 +59,20 @@ section.cardPage {
 }
 
 .close-btn {
-    padding: 5px 20px 5px 18px;
+    
     font-family: inter;
-    font-weight: 500;
+    font-weight: 700;
+    text-align: center;
 
     color: #fff;
-    background-image: linear-gradient(to right, #dc0000,#af0000);
+    background: #2a2a2a;
 
     right: 5%;
     top: 5%;
-    width: 100px;
+    width: 36px;
     height: 36px;
 
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 20px;
 
     position: absolute;
@@ -81,6 +82,9 @@ section.cardPage {
     transition: all ease 0.2s;
 }
 
+.close-btn:hover {
+    opacity: 0.85;
+}
 .close-btn:active {
     scale: 0.97;
 }

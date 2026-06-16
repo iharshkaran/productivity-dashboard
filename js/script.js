@@ -60,14 +60,24 @@ function todoList() {
         currentTask.forEach(function (tasks, idx) {
             sum += `<div class="task">
               <h5>${tasks.task}<span class="${tasks.imp}">imp</span></h5>
-              <button id=${idx}>Mark as Completed</button>
+              <button class="view-btn" id=${idx}><img src="assets/delete-icon.svg" alt="delete"></button>
+              <button class="delete-btn" id=${idx}><img src="assets/delete-icon.svg" alt="delete"></button>
             </div>`
         })
 
         allTask.innerHTML = sum;
 
+        let lodoDetailsPage = document.querySelector(".todo-details-section");
+
+        document.querySelectorAll(".view-btn").forEach((details)=>{
+            console.log(details.id);
+            details.addEventListener("click", ()=>{
+                lodoDetailsPage.style.display = "Block";
+            })
+        })
+
         // for Delete tasks
-        document.querySelectorAll(".task button").forEach((btn) => {
+        document.querySelectorAll(".task .delete-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
                 currentTask.splice(btn.id, 1);
                 renderTask()

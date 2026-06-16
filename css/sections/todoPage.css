@@ -2,7 +2,6 @@
     width: 100%;
     height: 86%;
 
-    border-radius: 12px;
     margin-top: 3rem;
 
     display: flex;
@@ -15,7 +14,7 @@
     height: 100%;
 
     background: var(--sec);
-    border-radius: 12px;
+    border-radius: 8px;
 
     display: flex;
     flex-direction: column;
@@ -26,31 +25,40 @@
 
 .todo-container .addTask form .input{
     width: 100%;
-    height: 54px;
+    height: 54px-;
+
     border: none;
     outline: none;
-    border-radius: 10px;
+
+    border-radius: 8px;
     background-color: var(--tri1);
     color: #fff;
+
     font-family: inter;
     font-size: 18px;
     font-weight: 500;
-    padding: 5% 20px;
+
+    padding: 5% 18px;
     margin-bottom: 18px;
 }
 
 .todo-container .addTask form textarea{
     width: 100%;
-    height: 50%;
+    height: 60%;
+
     border: none;
     outline: none;
-    border-radius: 12px 12px 0px 0px;
+
+    border-radius: 8px 8px 0px 0px;
+
     background-color: var(--tri1);
     color: #fff;
+
     font-family: inter;
     font-size: 18px;
     font-weight: 500;
-    padding: 10px 20px;
+
+    padding: 10px 18px;
     resize: none;
     overflow: hidden;
 }
@@ -58,16 +66,24 @@
 .todo-container .addTask form div.checkbox{
     background: var(--tri1);
     border-radius: 0px 0px 8px 8px;
+
     height: 42px;
     width: 100%;
-    margin-bottom: 12px;
+
     gap: 12px;
+
     display: flex;
     justify-content: center;
     justify-self: right;
     align-items: center;
-    margin-bottom: 24px;
+    
+    margin-bottom: 18px;
     padding: 10px 20px;
+}
+
+
+#check{
+    accent-color: #ff4d2d;
 }
 
 .todo-container .addTask form input#check{
@@ -76,15 +92,18 @@
 
 .todo-container .addTask form button{
     width: 100%;
-    height: 50px;
+    height: 46px;
+    border-radius: 8px;
+
     border: none;
     outline: none;
-    border-radius: 12px;
-    background-image: linear-gradient(to right, #e43a15 0%, #e65245 51%, #e43a15 100%);
+
+    background-image: linear-gradient(to right, #e43a15 0%, #e44638 51%, #e43a15 100%);
     color: #ffffff;
     font-family: inter;
     font-size: 18px;
     font-weight: 700;
+
     padding: 10px 20px;
     transition: all ease 0.2s;
 }
@@ -106,23 +125,47 @@
     overflow: auto;
 }
 
+
+.todo-container .allTask::-webkit-scrollbar {
+  width: 8px;
+}
+
+.todo-container .allTask::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 999px;
+}
+
+.todo-container .allTask::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .todo-container .allTask .task{
     width: 100%;
-    height: 65px;
+    height: 60px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+
     background-color: var(--tri1);
-    border-radius: 12px;
+    border-radius: 10px;
+
     margin-bottom: 10px;
     padding: 12px 20px;
+    
+    box-shadow: 0 0 0 0.75px #3a3a3a;
+    transition: all .3s ease;
+}
+
+.task:hover{
+    scale: 1.01;
 }
 
 .todo-container .allTask .task h5{
     color: #fff;
     font-weight: 700;
-    font-size: 18px; 
+    font-size: 16px; 
     display: flex;
     gap: 6px;
 }
@@ -139,15 +182,23 @@
 }
 
 .todo-container .allTask .task button{
-    background-color:green;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 10px 18px;
+    background-color:rgb(255, 255, 255);
+
+    padding: 5px;
+
     border: none;
     outline: none;
-    border-radius: 8px;
+
+    border-radius: 50px;
     transition: all ease 0.2s;
+    
+}
+
+.allTask .task button img{
+    width: 28px;
+    height: 24px;
+    justify-self: center;
+    align-self: center;
 }
 
 .todo-container .allTask .task button:active{

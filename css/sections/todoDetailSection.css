@@ -1,0 +1,104 @@
+section.todo-details-section{
+    position: absolute;
+    
+    color: white;
+    backdrop-filter: blur(8px);
+    background: #000000cc;
+    
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    display: none;
+}
+
+section.todo-details-section .todo-details-card{
+    top: 25%;
+    left: 30%;
+
+    width: 40%;
+    height: 50%;
+
+    background: var(--sec);
+    border-radius: 12px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 18px 20px 18px;
+
+    font-family: inter;
+
+    box-shadow: 0px 0px 8px 3px rgba(28, 28, 28, 0.432);
+}
+
+.todo-details-card .details-close{
+    position: absolute;
+
+    right: 4%;
+    top: 4%;
+
+    width: 26px;
+    height: 26px;
+    
+    font-size: 18px;
+    font-weight: 900;
+
+    margin: 2px 3px 0px 0px;
+    border-radius: 8px;
+
+    background-color: rgba(255, 255, 255, 0.644);
+    border: none;
+
+    cursor: pointer;
+
+    transition: all ease 0.2s;
+}
+
+.todo-details-card .details-close:active{
+    scale: 0.97;
+}
+
+.todo-details-card .details-close:hover{
+    background-color: rgba(255, 255, 255, 0.814);
+}
+
+
+.todo-details-card h2{
+    font-size: 24px;
+    padding-left: 3px;
+    padding-top: 2px;
+}
+
+.todo-details-card .details-title{
+    margin-top: 1rem;
+    padding: 12px;
+
+    width: 100%;
+    height: 3rem;
+
+    background: var(--pri);
+
+    border-radius: 12px;
+
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.todo-details-card .details-text{
+    padding: 12px;
+    margin-top: 1rem;
+
+    width: 100%;
+    height: 20rem;
+
+    background: var(--pri);
+
+    border-radius: 12px;
+}
+

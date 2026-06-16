@@ -1,85 +1,101 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/PD-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Productivity-Dashboard</title>
-  </head>
-  <body>
-    <div class="main">
-      <header class="nav">
-        <h1>.Productivity</h1>
-        <div class="circleBox">
-          <div class="circle1">
-            <a href="https://github.com/iharshkaran" target="_blank">
-              <img src="assets/github.svg" alt="GitHub">
-            </a>
-          </div>
-          <div class="circle2"><img src="assets/dark-theme.png" alt=""></div>
-        </div>
-      </header>
-      <section class="hero">
-        <h1>Hellooo..</h1>
-      </section>
-      <section class="allCards">
-        <div class="card todo" id="0">  
-          <img src="/assets/img1.webp" alt="img1">
-          <h3>Todo list</h3>
-        </div>
-        <div class="card pomo" id="1">
-          <img src="/assets/img2.jpg" alt="img2">
-          <h3>Pomodoro Timer</h3>
-        </div>
-        <div class="card planner" id="2">
-          <img src="/assets/img3.webp" alt="img3">
-          <h3>Daily Planner</h3>
-        </div>
-        <div class="card moti" id="3">
-          <img src="/assets/img4.jpg" alt="img4">
-          <h3>Motivation</h3>
-        </div>
-      </section>
-      <section class="cardPage todo-page">
-        <button class="close-btn" id="0">Close</button>
-        <h1>ToDo List</h1>
-        <div class="todo-container">
-          <div class="addTask">
-            <form action="">
-              <input type="text" placeholder="Enter Task" class="input">
-              <textarea placeholder="Enter Task Details" name="" id="" cols="30" rows="10"></textarea>
-              <div class="checkbox">
-                <input type="checkbox" name="checkbox" id="check">
-                <label for="check">Mark as Important</label>
-              </div>
-              <button>Add Task</button>
-            </form>
-          </div>
-          <div class="allTask">
-            
-          </div>
-        </div>
-      </section>
-      <section class="cardPage pomodoro-page">
-        <button class="close-btn" id="1">Close</button>
-        <h1>Pomodoro Timer</h1>
-      </section>
-      <section class="cardPage daily-planner-page">
-        <button class="close-btn" id="2">Close</button>
-        <h1>Daily Planner</h1>
 
-      </section>
-      <section class="cardPage Motivational-page">
-        <button class="close-btn" id="3">Close</button>
-        <h1>Motivational Quote</h1>
-      </section>
-      <section class="cardPage daily-goal-page">
-        <button class="close-btn" id="4">Close</button>
-        <h1>Daily Goal</h1>
-      </section>
-    </div>
-    
-    <script type="module" src="/js/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/PD-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Productivity-Dashboard</title>
+</head>
+
+<body>
+  <div class="main">
+    <header class="nav">
+      <h1>.Productivity</h1>
+      <div class="circleBox">
+        <div class="circle1">
+          <a href="https://github.com/iharshkaran" target="_blank">
+            <img src="assets/github.svg" alt="GitHub">
+          </a>
+        </div>
+        <div class="circle2"><img src="assets/dark-theme.png" alt=""></div>
+      </div>
+    </header>
+    <section class="hero">
+      <h1>Hellooo..</h1>
+    </section>
+    <section class="allCards">
+      <div class="card todo" id="0">
+        <img src="/assets/img1.webp" alt="img1">
+        <h3>Todo list</h3>
+      </div>
+      <div class="card pomo" id="1">
+        <img src="/assets/img2.jpg" alt="img2">
+        <h3>Pomodoro Timer</h3>
+      </div>
+      <div class="card planner" id="2">
+        <img src="/assets/img3.webp" alt="img3">
+        <h3>Daily Planner</h3>
+      </div>
+      <div class="card moti" id="3">
+        <img src="/assets/img4.jpg" alt="img4">
+        <h3>Motivation</h3>
+      </div>
+    </section>
+    <section class="cardPage todo-page">
+      <button class="close-btn" id="0">✕</button>
+      <h1>Your Personalized Task List</h1>
+      <div class="todo-container">
+        <div class="addTask">
+          <form action="">
+            <input type="text" placeholder="Enter Task" class="input">
+            <textarea placeholder="Describe your task..." name="" id="" cols="30" rows="10"></textarea>
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="check">
+              <label for="check">Mark as Important</label>
+            </div>
+            <button>Add Task</button>
+          </form>
+        </div>
+        <div class="allTask">
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="todo-details-section">
+
+      <div class="todo-details-card">
+        <h2>Details</h2>
+        <button class="details-close">✕</button>
+        <h3 class="details-title">Gym jao</h3>
+        <p class="details-text">Body bnao , girlfirend bnao, persence bnao</p>
+      </div>
+
+    </section>
+
+    <section class="cardPage pomodoro-page">
+      <button class="close-btn" id="1">✕</button>
+      <h1>Pomodoro Timer</h1>
+    </section>
+    <section class="cardPage daily-planner-page">
+      <button class="close-btn" id="2">✕</button>
+      <h1>Daily Planner</h1>
+
+    </section>
+    <section class="cardPage Motivational-page">
+      <button class="close-btn" id="3">✕</button>
+      <h1>Motivational Quote</h1>
+    </section>
+    <section class="cardPage daily-goal-page">
+      <button class="close-btn" id="4">✕</button>
+      <h1>Daily Goal</h1>
+    </section>
+  </div>
+
+  <script type="module" src="/js/script.js"></script>
+</body>
+
 </html>

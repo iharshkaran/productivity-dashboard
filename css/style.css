@@ -3,6 +3,7 @@
 @import url("sections/allCards.css");
 @import url("sections/todoPage.css");
 @import url("sections/dailyPlannerPage.css");
+@import url("sections/todoDetailSection.css");
 
 
 @font-face {
