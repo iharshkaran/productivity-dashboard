@@ -69,12 +69,25 @@ function todoList() {
 
         let lodoDetailsPage = document.querySelector(".todo-details-section");
 
-        document.querySelectorAll(".view-btn").forEach((details)=>{
-            console.log(details.id);
-            details.addEventListener("click", ()=>{
-                lodoDetailsPage.style.display = "Block";
+        // for View Details
+        document.querySelectorAll(".view-btn").forEach((details) => {
+            details.addEventListener("click", () => {
+                lodoDetailsPage.style.display = "block";
+                lodoDetailsPage.innerHTML = `<div class="todo-details-card">
+                                                <h2>Details</h2>
+                                                <button class="details-close">✕</button>
+                                                <h3 class="details-title">${currentTask[details.id].task}</h3>
+                                                <p class="details-text">${currentTask[details.id].details}</p>
+                                            </div>`
+                // for closing details
+                let detailsClose = document.querySelector(".details-close");
+                detailsClose.addEventListener("click", () => {
+                    lodoDetailsPage.style.display = "none";
+
+                })
             })
         })
+
 
         // for Delete tasks
         document.querySelectorAll(".task .delete-btn").forEach((btn) => {
