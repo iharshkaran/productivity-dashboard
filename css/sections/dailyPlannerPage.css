@@ -1,0 +1,78 @@
+section.daily-planner-page{
+    display: block;
+}
+
+.daily-planner{
+    width: 100%;
+    height: 90%;
+
+    margin: 1.8rem 0px;
+
+    background: rgb(10, 10, 10);
+    color: white;
+
+    border-radius: 12px;
+
+    overflow: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.daily-planner-time{
+
+    width: 49%;
+    height: 9.5%;
+
+    background: var(--sec);
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 18px;
+    margin-bottom: 1rem;
+
+    border-radius: 12px;
+}
+
+
+.daily-planner-time .planner-time{
+    width: 27%;
+    height: 70%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-right: 1px rgba(187, 187, 187, 0.699) solid;
+}
+
+.daily-planner-time .planner-task{
+    width: 73%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0px 18px;
+
+}
+
+.daily-planner-time .planner-task input{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--sec);
+    color: white;
+
+    border: none;
+    outline: none;
+
+    font-weight: 500;
+    font-size: 20px;
+}

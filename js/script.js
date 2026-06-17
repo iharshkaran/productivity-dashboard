@@ -1,6 +1,8 @@
 import todoList from "./todoList.js";
+import dailyPlanner from "./dailyPlanner.js";
 
 todoList();
+dailyPlanner();
 
 function openFeatures() {
     var cards = document.querySelectorAll(".card");
