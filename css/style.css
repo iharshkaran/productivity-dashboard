@@ -2,6 +2,7 @@
 @import url("sections/hero.css");
 @import url("sections/allCards.css");
 @import url("sections/todoPage.css");
+@import url("sections/pomodoro.css");
 @import url("sections/dailyPlannerPage.css");
 @import url("sections/todoDetailSection.css");
 @import url("sections/motivation.css");
@@ -28,6 +29,11 @@
 @font-face {
     font-family: authorName;
     src: url(/fonts/Corinthia-Bold.ttf);
+}
+
+@font-face {
+    font-family: zenDots;
+    src: url(/fonts/ZenDots-Regular.ttf);
 }
 
 

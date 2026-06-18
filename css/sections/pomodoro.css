@@ -1,0 +1,64 @@
+section.pomodoro-page{
+    display: block;
+}
+
+.pomodoro-container{
+    background: #000;
+
+    height: 90%;
+    width: 100%;
+
+    margin-top: 1.2rem;
+    border-radius: 12px;
+    border: 0.01rem solid rgb(35, 35, 35);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pomodoro-timer{
+    width: 100%;
+    height: 50%;
+
+    font-family: zenDots;
+    font-size: 4.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.pomodoro-btns{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    padding-top: 1.5rem;
+
+    font-family: inter;
+}
+
+.pomodoro-btns button{
+    padding: 10px 30px;
+    margin: 0.75rem;
+
+    border: none;
+    outline: none;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 6px 6px 0px #202020, 12px 12px 20px rgba(24, 24, 24, 0.3);
+    transition: all ease 0.2s;
+}
+
+.pomodoro-btns button:active{
+    box-shadow: 0px 0px 0px #202020, 6px 6px 6px rgba(24, 24, 24, 0.3);
+
+}
