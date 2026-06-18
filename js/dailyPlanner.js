@@ -27,7 +27,6 @@ function dailyPlanner(){
     dailyPlanner.innerHTML = wholeDaySum
 
     let dailyPlannerInput = document.querySelectorAll(".daily-planner input");
-    console.log(dailyPlannerInput)
     dailyPlannerInput.forEach((inputPlanner,idx)=>{
         inputPlanner.addEventListener("input",()=>{
             dailyPlannerInputData[idx] = inputPlanner.value;

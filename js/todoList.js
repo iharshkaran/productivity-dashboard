@@ -113,6 +113,10 @@ function todoList() {
         document.querySelectorAll(".task .delete-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
                 currentTask.splice(btn.id, 1);
+
+                task.value = ''
+                taskDetail.value = ''
+                taskCheck.checked = false
                 renderTask()
             })
         })

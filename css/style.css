@@ -4,6 +4,7 @@
 @import url("sections/todoPage.css");
 @import url("sections/dailyPlannerPage.css");
 @import url("sections/todoDetailSection.css");
+@import url("sections/motivation.css");
 
 
 @font-face {
@@ -22,6 +23,11 @@
     font-family: inter;
     font-weight: 700;
     src: url(/fonts/InterTight-Bold.ttf);
+}
+
+@font-face {
+    font-family: authorName;
+    src: url(/fonts/Corinthia-Bold.ttf);
 }
 
 

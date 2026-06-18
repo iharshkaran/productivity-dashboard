@@ -1,8 +1,10 @@
 import todoList from "./todoList.js";
 import dailyPlanner from "./dailyPlanner.js";
+import motivationalQuote from "./motivation.js";
 
 todoList();
 dailyPlanner();
+motivationalQuote();
 
 function openFeatures() {
     var cards = document.querySelectorAll(".card");
