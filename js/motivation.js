@@ -10,7 +10,7 @@ function motivationalQuote(){
         motivationalAuthorDiv.innerHTML = `&#8213; ${data.author}`
     }
 
-    // fetchQuote()
+    fetchQuote()
 }
 
 export default motivationalQuote;
