@@ -1,8 +1,7 @@
-section.pomodoro-page{
-    display: block;
+section.pomodoro-page {
 }
 
-.pomodoro-container{
+.pomodoro-container {
     background: #000;
 
     height: 90%;
@@ -15,11 +14,65 @@ section.pomodoro-page{
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: inset 0 0 18px green;
+}
+.pomodoro-container.false {
+    box-shadow: inset 0 0 18px blue;
 }
 
-.pomodoro-timer{
+.sessionType {
+    width: 16%;
+
+    padding: 5px 9px;
+
+    border: 0.01rem solid green;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+
+
+    position: absolute;
+
+    top: 28%;
+    left: 42%;
+    border-radius: 12px;
+}
+
+.sessionType.false {
+    border: 0.01rem solid blue;
+}
+
+.sessionType .dot {
+    position: absolute;
+
+    top: 29%;
+    left: 7%;
+
+    height: 0.7rem;
+    width: 0.7rem;
+
+    background: green;
+    border-radius: 50%;
+}
+
+.sessionType .dot.false {
+    background: blue;
+}
+
+.sessionType .sessionTypeTilte {
+    color: green;
+    margin-left: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sessionType .sessionTypeTilte.false {
+    color: blue;
+}
+
+.pomodoro-timer {
     width: 100%;
-    height: 50%;
+    height: 60%;
 
     font-family: zenDots;
     font-size: 4.5rem;
@@ -27,11 +80,17 @@ section.pomodoro-page{
     display: flex;
     justify-content: center;
     align-items: end;
+
 }
 
-.pomodoro-btns{
+.pomodoro-timer h1 {
+    text-shadow: 0 2px 0 rgb(175, 175, 175), 0 12px 30px rgba(255, 255, 255, 0.278);
+}
+
+
+.pomodoro-btns {
     width: 100%;
-    height: 50%;
+    height: 40%;
 
     display: flex;
     justify-content: center;
@@ -42,7 +101,7 @@ section.pomodoro-page{
     font-family: inter;
 }
 
-.pomodoro-btns button{
+.pomodoro-btns button {
     padding: 10px 30px;
     margin: 0.75rem;
 
@@ -54,11 +113,11 @@ section.pomodoro-page{
     font-size: 15px;
     font-weight: 700;
 
-    box-shadow: 6px 6px 0px #202020, 12px 12px 20px rgba(24, 24, 24, 0.3);
-    transition: all ease 0.2s;
+    box-shadow: 4px 4px 0px #5a5a5a, 10px 10px 10px rgba(49, 49, 49, 0.675);
+    transition: all ease 0.1s;
 }
 
-.pomodoro-btns button:active{
+.pomodoro-btns button:active {
     box-shadow: 0px 0px 0px #202020, 6px 6px 6px rgba(24, 24, 24, 0.3);
 
 }

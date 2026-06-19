@@ -1,8 +1,10 @@
 import todoList from "./todoList.js";
+import pomodoroTimer from "./pomodoro.js";
 import dailyPlanner from "./dailyPlanner.js";
 import motivationalQuote from "./motivation.js";
 
 todoList();
+pomodoroTimer();
 dailyPlanner();
 motivationalQuote();
 
