@@ -25,15 +25,15 @@ function daysTime() {
     let year = now.getFullYear();
 
     currentDay.innerHTML = `${day}, ${date} ${month} ${year}`;
-    if(hour > 12){
-        currentTime.innerHTML = `${(hour-12).toString().padStart(2, 0)}:${minute.toString().padStart(2, 0)}:${second.toString().padStart(2, 0)}<span>PM</span>`;
+    if (hour > 12) {
+        currentTime.innerHTML = `${(hour - 12).toString().padStart(2, 0)}:${minute.toString().padStart(2, 0)}:${second.toString().padStart(2, 0)}<span>PM</span>`;
     } else {
-        currentTime.innerHTML = `${(hour).toString().padStart(2, 0)}:${minute.toString().padStart(2, 0)}:${second.toString().padStart(2, 0)}<span>PM</span>`;
+        currentTime.innerHTML = `${(hour).toString().padStart(2, 0)}:${minute.toString().padStart(2, 0)}:${second.toString().padStart(2, 0)}<span>AM</span>`;
     }
-    
-    setInterval(()=>{
-        daysTime();
-    },1000)
 }
+
+setInterval(() => {
+    daysTime();
+}, 1000)
 
 export default daysTime;
