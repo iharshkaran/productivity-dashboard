@@ -62,7 +62,7 @@ function pomodoroTimer() {
                     resetTimer();
                 }
                 updatetimer();
-            }, 10);
+            }, 1000);
 
         }
     }

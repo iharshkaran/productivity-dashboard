@@ -9,7 +9,7 @@ section.allCards {
 
 .card {
     height: 90%;
-    border-radius: 12px;
+    border-radius: 8px;
     
     overflow: hidden;
     position: relative;
@@ -37,7 +37,12 @@ section.allCards {
     color: #f6f8ee;
 }
 
+.card:hover {
+    scale: 1.01;;
+}
+
 .card:active {
+    border: 1px solid black;
     scale: 0.97;
 }
 
