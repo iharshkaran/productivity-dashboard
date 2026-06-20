@@ -41,11 +41,11 @@
     <section class="allCards">
       <div class="card todo" id="0">
         <img src="/assets/img1.png" alt="img1">
-        <h3>Todo list</h3>
+        <h3>To-do list</h3>
       </div>
       <div class="card pomo" id="1">
         <img src="/assets/img2.jpg" alt="img2">
-        <h3>Pomodoro Timer</h3>
+        <h3>Pomodoro</h3>
       </div>
       <div class="card planner" id="2">
         <img src="/assets/img3.webp" alt="img3">
@@ -74,10 +74,15 @@
         </div>
         <div class="allTask">
           <div class="task">
-            <button class="mark-btn true" id=${idx}><img src="assets/checkbox-icon.svg" alt="delete"></button>
+            <div>
+              <button class="mark-btn true" id=${idx}><img src="/checkbox-icon.svg" alt="delete"></button>
+            </div>
             <h5 class="true">Radhee Radhee<span class="${tasks.imp}">imp</span></h5>
-            <button class="view-btn" id=${idx}><img src="assets/details-icon.svg" alt="delete"></button>
-            <button class="delete-btn" id=${idx}><img src="assets/delete-icon.svg" alt="delete"></button>
+            <div class="todoFunctionBtns">
+              <button class="view-btn" id=${idx}><img src="/details-icon.svg" alt="view"></button>
+              <button class="edit-btn" id=${idx}><img src="/edit-icon.svg" alt="edit"></button>
+              <button class="delete-btn" id=${idx}><img src="/delete-icon.svg" alt="delete"></button>
+            </div>
           </div>
 
         </div>

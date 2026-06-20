@@ -17,7 +17,7 @@ section.allCards {
     transition: all ease-in 0.2s;
     cursor: pointer;
 
-    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px 3px var(--black);
 }
 
 .card img {
@@ -34,7 +34,7 @@ section.allCards {
 }
 
 .card.moti {
-    color: #f6f8ee;
+    color: var(--white2);
 }
 
 .card:hover {
@@ -42,7 +42,6 @@ section.allCards {
 }
 
 .card:active {
-    border: 1px solid black;
     scale: 0.97;
 }
 
@@ -53,7 +52,7 @@ section.cardPage {
     height: 95%;
     
     font-family: inter;
-    color: #fff;
+    color: var(--white1);
     background-color: rgb(10, 10, 10);
     box-shadow: 4px 0px 0px #1e1e1e, -4px 0px 0px #1e1e1e;
     
@@ -69,7 +68,7 @@ section.cardPage {
     font-weight: 700;
     text-align: center;
 
-    color: #fff;
+    color: var(--white1);
     background: #2a2a2a;
 
     right: 5%;

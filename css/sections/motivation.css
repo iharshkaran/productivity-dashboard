@@ -53,15 +53,17 @@ section.motivational-page {
 .motivational-card .motivational-quote{
     
     color: #465512;
+    line-height: 1.2;
 
-    font-family: inter;
+    font-family: 'Syne', sans-serif;
+    font-style: italic;
     font-weight: 700;
     font-size: 24px;
 
     width: 100%;
     height: 50%;
 
-    margin: 1rem 0px 0.75rem 0px;
+    margin: 1.1rem 0px 0.75rem 0px;
 
     z-index: 2;
 }

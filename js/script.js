@@ -15,11 +15,13 @@ motivationalQuote();
 function openFeatures() {
     var cards = document.querySelectorAll(".card");
     var cardPage = document.querySelectorAll(".cardPage");
-    var cardPageBackBtn = document.querySelectorAll(".close-btn")
+    var cardPageBackBtn = document.querySelectorAll(".close-btn");
+    var main = document.querySelector(".main")
 
     cards.forEach(function (card) {
         card.addEventListener("click", function () {
             cardPage[card.id].style.display = "block";
+
         })
     })
 

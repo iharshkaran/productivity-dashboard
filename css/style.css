@@ -42,6 +42,12 @@
     --sec: #191a1c;
     --tri1: #2a2b2e;
     --tri2: #1e1e1e;
+
+    --white1: white;
+    --white2: rgb(220, 220, 220);
+
+    --black: black;
+    --gray2: #313131;
 }
 
 * {
@@ -54,7 +60,7 @@ body,
 html {
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#333333 1px, #000 1px);
+    background-image: radial-gradient(var(--gray2) 1px, var(--black) 1px);
     background-size: 10px 10px;
 }
 
@@ -66,4 +72,244 @@ html {
 
     display: flex;
     flex-direction: column;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    .main {
+        padding: 0px 1rem;
+    }
+
+    /* nav */
+    .nav .circleBox {
+        width: 14%;
+    }
+
+    /* hero */
+    .hero2 {
+        width: 20%;
+    }
+
+    /* daily Planner */
+    .daily-planner-time {
+        width: 100%;
+    }
+
+    .daily-planner-time .planner-time {
+        width: 15%;
+        justify-content: flex-start;
+    }
+
+    /* To-do */
+    .todo-container .allTask .task button {
+        margin-left: 0rem;
+    }
+
+    .todo-container .addTask form div.checkbox {
+        padding: 10px 0px;
+    }
+
+    .todo-container .allTask .task h5 {
+        width: 50%;
+    }
+
+    /* pomodoro */
+    .sessionType {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main {
+        position: auto;
+    }
+
+    /* nav */
+    .nav .circleBox {
+        width: 18%;
+    }
+
+    /* hero */
+    .hero1 {
+        margin-left: 0rem;
+        width: 30%;
+    }
+
+    .hero1 h1 {
+        font-size: 45px;
+    }
+
+    .hero1 h1 span {
+        font-size: 20px;
+        margin-left: 0.25rem;
+    }
+
+    .hero1 h4 {
+        font-size: 13px;
+    }
+
+    .hero1 h3 {
+        margin-top: 4rem;
+        font-size: 18px;
+    }
+
+    .hero2 {
+        width: 20%;
+    }
+
+    .hero2 h1 {
+        font-size: 35px;
+        margin-bottom: 0rem;
+    }
+
+    .hero2 h3 {
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero2 h5 {
+        font-size: 11px;
+    }
+
+    /* All Cards */
+    section.allCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    section.cardPage {
+        font-size: 13px;
+
+        top: 0%;
+
+        min-height: 140%;
+        height: auto;
+
+        padding: 1.5rem;
+        border-radius: 0px;
+    }
+
+    .close-btn {
+        right: 4%;
+        top: 2.7%;
+        width: 32px;
+        height: 32px;
+
+        font-size: 18px;
+    }
+
+    /* to-do */
+    .todo-container {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .todo-container .addTask {
+        width: 100%;
+        height: 50%;
+
+        padding: 18px;
+        margin-bottom: 1rem;
+    }
+
+    .todo-container .addTask form .input {
+        height: 45px;
+    }
+
+    .todo-container .addTask form textarea {
+        height: 10rem;
+    }
+
+    .todo-container .addTask form button {
+        height: 45px;
+    }
+
+    .todo-container .allTask {
+        width: 100%;
+        height: auto;
+    }
+
+    .todo-container .allTask .task h5 {
+        width: 50%;
+    }
+
+    /* Pomodoro */
+
+    .pomodoro-container {
+        height: 80vh;
+
+        margin-top: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .sessionType {
+        width: 30%;
+
+        top: 25%;
+        left: 35%;
+        border-radius: 8px;
+    }
+
+    .pomodoro-timer {
+        height: 55%;
+        font-size: 2.8rem;
+    }
+
+    .pomodoro-btns {
+        padding-top: 0.8rem;
+    }
+
+    .pomodoro-btns button {
+        padding: 6px 24px;
+        margin: 0.5rem;
+    }
+
+    /* daily Planner */
+    .daily-planner-time {
+        height: 2.8rem;
+    }
+
+    .daily-planner-time .planner-time {
+        width: 24%;
+    }
+
+    /* motivation */
+
+
+    .motivational-container {
+        height: 90vh;
+    }
+
+    .motivational-container .motivational-card {
+        width: 70%;
+    }
+
+
+    .motivational-card .motivational-title {
+        font-size: 18px;
+    }
+
+
+    .motivational-card .motivational-quote {
+        line-height: 1.15;
+        font-size: 23px;
+    }
+
+    .motivational-card .motivational-author {
+        font-size: 26px;
+    }
 }

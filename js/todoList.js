@@ -9,6 +9,12 @@ function todoList() {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+
+        if (task.value.trim() === "") {
+            alert("Please enter a task title!");
+            return;
+        }
+
         if (editIdx == null) {
             currentTask.push(
                 {
@@ -52,9 +58,11 @@ function todoList() {
             sum += `<div class="task">
             <button class="mark-btn ${tasks.completed}" id=${idx}><img src="/checkbox-icon.svg" alt="check"></button>
             <h5 class="${tasks.completed}">${tasks.task}<span class="${tasks.imp}">imp</span></h5>
-            <button class="view-btn" id=${idx}><img src="/details-icon.svg" alt="view"></button>
-            <button class="edit-btn" id=${idx}><img src="/edit-icon.svg" alt="edit"></button>
-            <button class="delete-btn" id=${idx}><img src="/delete-icon.svg" alt="delete"></button>
+            <div class="todoFunctionBtns">
+              <button class="view-btn" id=${idx}><img src="/details-icon.svg" alt="view"></button>
+              <button class="edit-btn" id=${idx}><img src="/edit-icon.svg" alt="edit"></button>
+              <button class="delete-btn" id=${idx}><img src="/delete-icon.svg" alt="delete"></button>
+            </div>
             </div>`
         })
 
