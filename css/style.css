@@ -291,7 +291,7 @@ html {
 
 
     .motivational-container {
-        height: 90vh;
+        height: 80vh;
     }
 
     .motivational-container .motivational-card {
@@ -311,5 +311,140 @@ html {
 
     .motivational-card .motivational-author {
         font-size: 26px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    /* nav */
+    .nav {
+        height: 12%;
+    }
+
+    .nav h1 {
+        font-size: 25px;
+    }
+
+    .nav .circleBox {
+        width: 25%;
+    }
+
+    .circle1,
+    .circle2 {
+        width: 35px;
+        height: 35px;
+    }
+
+    .circle1 img,
+    .circle2 img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* hero */
+    .hero1 {
+        width: 40%;
+    }
+
+    .hero1 h1 {
+        font-size: 28px;
+    }
+
+    .hero1 h1 span {
+        font-size: 14px;
+    }
+
+    .hero1 h4 {
+        font-size: 10px;
+    }
+
+    .hero1 h3 {
+        margin-top: 7rem;
+        font-size: 14px;
+    }
+
+    .hero2 {
+        width: 25%;
+    }
+
+    .hero2 h1 {
+        font-size: 22px;
+        margin-bottom: 0rem;
+    }
+
+    .hero2 h3 {
+        font-size: 14px;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero2 h5 {
+        font-size: 8px;
+    }
+
+    /* All Cards */
+    section.allCards {
+        gap: 0.9rem;
+    }
+
+    .card {
+        height: 280px;
+    }
+
+    section.cardPage {
+        font-size: 10px;
+
+        min-height: 130%;
+    }
+
+    .close-btn {
+        top: 2.4%;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* to-do */
+    .todo-container .addTask form div.checkbox {
+        font-size: 12px;
+    }
+
+    /* Pomodoro */
+    .sessionType {
+        top: 24%;
+    }
+
+    .pomodoro-timer {
+        height: 46%;
+        font-size: 1.8rem;
+    }
+
+    .pomodoro-btns {
+        padding-top: 0.9rem;
+    }
+
+    .pomodoro-btns button {
+        padding: 3px 9px;
+        font-size: 10px;
+    }
+
+    /* motivation */
+
+    .motivational-card img {
+        top: -8%;
+        right: 5%;
+        height: 30%;
+    }
+
+    .motivational-card .motivational-title {
+        font-size: 16px;
+    }
+
+    .motivational-card .motivational-quote {
+        line-height: 1.1;
+        font-size: 20px;
+    }
+
+    .motivational-card .motivational-author {
+        font-size: 22px;
     }
 }
