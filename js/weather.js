@@ -33,11 +33,11 @@ function weather() {
 
             if (weatherCode === 0) {
                 weatherType = "Clear Sky";
-                hero.style.backgroundImage = `url(/assets/sunny.jpg)` 
+                hero.style.backgroundImage = `url(/sunny.jpg)` 
             }
             else if (weatherCode >= 1 && weatherCode <= 48) {
                 weatherType = "Cloudy";
-                hero.style.backgroundImage = `url(/assets/cloudy.jpg)`
+                hero.style.backgroundImage = `url(/cloudy.jpg)`
             }
 
             else if (
@@ -45,7 +45,7 @@ function weather() {
                 (weatherCode >= 80 && weatherCode <= 82)
             ) {
                 weatherType = "Rainy";
-                hero.style.backgroundImage = `url(/assets/rainy.jpg)`
+                hero.style.backgroundImage = `url(/rainy.jpg)`
             }
 
             else if ((
@@ -54,12 +54,12 @@ function weather() {
                 weatherCode === 86
             ) {
                 weatherType = "Snowy";
-                hero.style.backgroundImage = `url(/assets/snowy.jpg)`
+                hero.style.backgroundImage = `url(/snowy.jpg)`
             }
 
             else if (weatherCode >= 95) {
                 weatherType = "Thunderstorm";
-                hero.style.backgroundImage = `url(/assets/thunderstorm.jpg)`
+                hero.style.backgroundImage = `url(/thunderstorm.jpg)`
             }
 
             currentTemp.innerHTML = `${temp}°C`;

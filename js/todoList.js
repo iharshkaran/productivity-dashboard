@@ -50,11 +50,11 @@ function todoList() {
 
         currentTask.forEach(function (tasks, idx) {
             sum += `<div class="task">
-            <button class="mark-btn ${tasks.completed}" id=${idx}><img src="assets/checkbox-icon.svg" alt="check"></button>
+            <button class="mark-btn ${tasks.completed}" id=${idx}><img src="/checkbox-icon.svg" alt="check"></button>
             <h5 class="${tasks.completed}">${tasks.task}<span class="${tasks.imp}">imp</span></h5>
-            <button class="view-btn" id=${idx}><img src="assets/details-icon.svg" alt="view"></button>
-            <button class="edit-btn" id=${idx}><img src="assets/edit-icon.svg" alt="edit"></button>
-            <button class="delete-btn" id=${idx}><img src="assets/delete-icon.svg" alt="delete"></button>
+            <button class="view-btn" id=${idx}><img src="/details-icon.svg" alt="view"></button>
+            <button class="edit-btn" id=${idx}><img src="/edit-icon.svg" alt="edit"></button>
+            <button class="delete-btn" id=${idx}><img src="/delete-icon.svg" alt="delete"></button>
             </div>`
         })
 
