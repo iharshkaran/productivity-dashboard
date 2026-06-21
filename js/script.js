@@ -34,3 +34,28 @@ function openFeatures() {
 }
 
 openFeatures()
+
+function themeChange() {
+    const circle2 = document.querySelector(".circle2");
+    const rootElement = document.documentElement;
+
+    let darkMode = true;
+
+    circle2.addEventListener("click", () => {
+
+        if (darkMode) {
+            rootElement.style.setProperty("--blackBG", "white");
+            rootElement.style.setProperty("--black", "white");
+            rootElement.style.setProperty("--white1", "black");
+            darkMode = false;
+        } else {
+            rootElement.style.setProperty("--blackBG", "black");
+            rootElement.style.setProperty("--black", "black");
+            rootElement.style.setProperty("--white1", "white");
+            darkMode = true;
+        }
+
+    });
+}
+
+themeChange();
