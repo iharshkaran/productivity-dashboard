@@ -126,27 +126,48 @@ html {
 }
 
 @media screen and (max-width: 750px) {
+
     .main {
-        position: auto;
+        min-height: 100%;
     }
 
-    /* nav */
+    /* Nav */
+    .nav h1 {
+        font-size: 28px;
+    }
+
     .nav .circleBox {
-        width: 18%;
+        width: 20%;
     }
 
-    /* hero */
+    .circle1,
+    .circle2 {
+        width: 38px;
+        height: 38px;
+    }
+
+    .circle1 img,
+    .circle2 img {
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    /* Hero */
     .hero1 {
         margin-left: 0rem;
         width: 30%;
     }
 
     .hero1 h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .hero1 h1 span {
-        font-size: 20px;
+        font-size: 18px;
         margin-left: 0.25rem;
     }
 
@@ -155,30 +176,31 @@ html {
     }
 
     .hero1 h3 {
-        margin-top: 4rem;
+        margin-top: 3rem;
         font-size: 18px;
     }
 
     .hero2 {
-        width: 20%;
+        width: 25%;
     }
 
     .hero2 h1 {
-        font-size: 35px;
+        font-size: 32px;
         margin-bottom: 0rem;
     }
 
     .hero2 h3 {
-        font-size: 18px;
-        margin-bottom: 1.5rem;
+        font-size: 17px;
+        font-weight: 600;
     }
 
     .hero2 h5 {
         font-size: 11px;
     }
 
-    /* All Cards */
+    /* Cards */
     section.allCards {
+        min-height: 300px;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
@@ -187,117 +209,192 @@ html {
         height: 300px;
     }
 
+    .card img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card h3 {
+        font-family: inter;
+        position: absolute;
+        right: 10%;
+        bottom: 6%;
+    }
+
+    .card.moti {
+        color: var(--white2);
+    }
+
+    .card:hover {
+        scale: 1.01;
+        ;
+    }
+
+    .card:active {
+        scale: 0.97;
+    }
+
     section.cardPage {
-        font-size: 13px;
-
         top: 0%;
-
-        min-height: 140%;
+        left: 0%;
+        width: 100%;
+        min-height: 100vh;
         height: auto;
-
-        padding: 1.5rem;
+        font-size: 14px;
+        padding: 1rem;
         border-radius: 0px;
     }
 
+    section.cardPage h1 {
+        padding: 1rem 1rem 0rem 1rem;
+    }
+
     .close-btn {
-        right: 4%;
-        top: 2.7%;
+        right: 6%;
+        top: 2.3rem;
         width: 32px;
         height: 32px;
-
         font-size: 18px;
     }
 
-    /* to-do */
+    /*100 */
     .todo-container {
-        width: 100%;
         height: auto;
+        margin-top: 2.5rem;
 
-        display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
     }
 
     .todo-container .addTask {
-        width: 100%;
-        height: 50%;
-
-        padding: 18px;
-        margin-bottom: 1rem;
-    }
-
-    .todo-container .addTask form .input {
-        height: 45px;
-    }
-
-    .todo-container .addTask form textarea {
-        height: 10rem;
-    }
-
-    .todo-container .addTask form button {
-        height: 45px;
-    }
-
-    .todo-container .allTask {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
 
-    .todo-container .allTask .task h5 {
-        width: 50%;
+    .todo-container .addTask form .input {
+        height: 50px;
     }
 
-    /* Pomodoro */
+    .todo-container .addTask form textarea {
+        width: 100%;
+        height: 10rem;
+    }
 
-    .pomodoro-container {
-        height: 80vh;
+    .todo-container .allTask {
+        width: 95%;
+        height: auto;
+    }
 
-        margin-top: 1.5rem;
+    .todo-container .allTask .task {
+        width: 100%;
+        height: 50px;
+
         border-radius: 8px;
+
+        margin-bottom: 10px;
+        padding: 10px 10px;
+    }
+
+    .todo-container .allTask .task h5 {
+        width: 80%;
+        gap: 5px;
+    }
+
+    .todo-container .allTask .task button {
+        width: 2rem;
+        height: 2rem;
+
+        padding: 3px;
+        display: none;
+
+        border-radius: 50px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+
+    /* pomodoro */
+    .pomodoro-container {
+        height: 85vh;
+        box-shadow: inset 0 0 24px green;
+    }
+
+    .pomodoro-container.false {
+        box-shadow: inset 0 0 24px blue;
     }
 
     .sessionType {
-        width: 30%;
-
-        top: 25%;
-        left: 35%;
-        border-radius: 8px;
+        width: 28%;
+        top: 33%;
+        left: 36%;
     }
 
     .pomodoro-timer {
-        height: 55%;
-        font-size: 2.8rem;
+
+        width: 100%;
+        height: 58%;
+
+        font-family: sans-serif;
+        font-size: 4.2rem;
     }
 
     .pomodoro-btns {
-        padding-top: 0.8rem;
+        width: 100%;
+        height: 45%;
+        padding-top: 1rem;
     }
 
     .pomodoro-btns button {
-        padding: 6px 24px;
-        margin: 0.5rem;
+        padding: 8px 28px;
     }
 
-    /* daily Planner */
-    .daily-planner-time {
-        height: 2.8rem;
+    /*  Daily Planner */
+
+    .daily-planner {
+        width: 100%;
+        border-radius: 8px;
+        flex-direction: column;
     }
+
+    .daily-planner .daily-planner-time {
+        width: 100%;
+        height: 40px;
+    }
+
 
     .daily-planner-time .planner-time {
-        width: 24%;
+        width: 25%;
+        height: 90%;
+    }
+
+    .daily-planner-time .planner-task {
+        width: 75%;
+    }
+
+    .daily-planner-time .planner-task input {
+        font-size: 16px;
     }
 
     /* motivation */
 
-
     .motivational-container {
-        height: 80vh;
+        height: 85vh;
     }
 
     .motivational-container .motivational-card {
-        width: 70%;
+        width: 60%;
+        padding: 22px;
     }
 
+    .motivational-card img {
+        top: -9%;
+        right: 5%;
+        height: 32%;
+    }
 
     .motivational-card .motivational-title {
         font-size: 18px;
@@ -305,8 +402,8 @@ html {
 
 
     .motivational-card .motivational-quote {
-        line-height: 1.15;
-        font-size: 23px;
+        line-height: 1.1;
+        font-size: 22px;
     }
 
     .motivational-card .motivational-author {
@@ -314,137 +411,213 @@ html {
     }
 }
 
+@media screen and (max-width: 480px) {
 
-@media screen and (max-width: 550px) {
-
-    /* nav */
-    .nav {
-        height: 12%;
-    }
-
+    /* Nav */
     .nav h1 {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .nav .circleBox {
-        width: 25%;
+        width: 30%;
     }
 
     .circle1,
     .circle2 {
-        width: 35px;
-        height: 35px;
+        width: 34px;
+        height: 34px;
     }
 
     .circle1 img,
     .circle2 img {
-        width: 28px;
-        height: 28px;
+        width: 27px;
+        height: 27px;
     }
 
-    /* hero */
     .hero1 {
-        width: 40%;
+        width: 50%;
+
     }
 
     .hero1 h1 {
+        margin-left: -8px;
         font-size: 28px;
     }
 
     .hero1 h1 span {
-        font-size: 14px;
+        font-size: 13px;
+        margin-left: 0.25rem;
     }
 
     .hero1 h4 {
+        padding-top: 2rem;
+        margin-left: -8px;
         font-size: 10px;
     }
 
     .hero1 h3 {
-        margin-top: 7rem;
-        font-size: 14px;
+        margin-left: -8px;
+        margin-top: 8rem;
+        font-size: 16px;
     }
 
     .hero2 {
-        width: 25%;
+        width: 30%;
     }
 
     .hero2 h1 {
-        font-size: 22px;
-        margin-bottom: 0rem;
+        font-size: 28px;
     }
 
     .hero2 h3 {
-        font-size: 14px;
-        margin-bottom: 1.2rem;
+        font-size: 15px;
     }
 
     .hero2 h5 {
-        font-size: 8px;
+        font-size: 10px;
     }
 
-    /* All Cards */
-    section.allCards {
-        gap: 0.9rem;
-    }
-
+    /* Cards */
     .card {
         height: 280px;
     }
 
     section.cardPage {
-        font-size: 10px;
+        font-size: 13px;
+        padding: 0.5rem;
+    }
 
-        min-height: 130%;
+    section.cardPage h1 {
+        padding: 1.5rem 2rem 0rem 0.5rem;
     }
 
     .close-btn {
-        top: 2.4%;
-        width: 30px;
-        height: 30px;
+        right: 6%;
+        top: 2.3rem;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 
-    /* to-do */
-    .todo-container .addTask form div.checkbox {
-        font-size: 12px;
+    /*100 */
+    .todo-container {
+        margin-top: 2rem;
     }
 
-    /* Pomodoro */
+    .todo-container .addTask {
+        width: 100%;
+        height: auto;
+        padding: 0.6rem;
+    }
+
+    .todo-container .addTask form .input {
+        height: 50px;
+        border-radius: 6px;
+        margin-bottom: 0.6rem;
+        font-size: 16px;
+        padding: 0.8rem;
+    }
+
+    .todo-container .addTask form textarea {
+        font-size: 16px;
+        border-radius: 6px 6px 0px 0px;
+        width: 100%;
+        height: 9rem;
+        padding: 0.8rem;
+    }
+
+    .todo-container .allTask {
+        width: 100%;
+        height: auto;
+        margin-top: 0.6rem;
+        border-radius: 8px;
+        padding: 0.6rem;
+    }
+
+    .todo-container .allTask .task {
+        width: 100%;
+        height: 50px;
+
+        border-radius: 6px;
+
+        margin-bottom: 10px;
+        padding: 6px 10px;
+    }
+
+    .todo-container .allTask .task h5 {
+        width: 60%;
+        gap: 5px;
+    }
+
+    .todo-container .allTask .task button {
+        width: 2rem;
+        height: 2rem;
+
+        padding: 3px;
+        display: initial;
+
+        border-radius: 50px;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+
+    /* pomodoro */
+
     .sessionType {
-        top: 24%;
+        width: 35%;
+        top: 33%;
+        left: 36%;
     }
 
     .pomodoro-timer {
-        height: 46%;
-        font-size: 1.8rem;
+        height: 55%;
+        padding-left: 2rem;
+        font-size: 3.2rem;
     }
 
     .pomodoro-btns {
-        padding-top: 0.9rem;
+        width: 100%;
+        height: 48%;
+        padding-top: 1rem;
     }
 
     .pomodoro-btns button {
-        padding: 3px 9px;
-        font-size: 10px;
+        padding: 7px 20px;
+    }
+
+    /*  Daily Planner */
+
+
+
+    .daily-planner .daily-planner-time {
+        padding: 0px 10px;
+        width: 100%;
+        height: 40px;
+        border-radius: 6px;
+    }
+
+
+    .daily-planner-time .planner-time {
+        width: 30%;
+        height: 90%;
+        font-size: 14px;
+    }
+
+    .daily-planner-time .planner-task {
+        width: 70%;
     }
 
     /* motivation */
-
+    .motivational-container .motivational-card {
+        width: 70%;
+        padding: 22px;
+    }
     .motivational-card img {
-        top: -8%;
+        top: -9%;
         right: 5%;
         height: 30%;
-    }
-
-    .motivational-card .motivational-title {
-        font-size: 16px;
-    }
-
-    .motivational-card .motivational-quote {
-        line-height: 1.1;
-        font-size: 20px;
-    }
-
-    .motivational-card .motivational-author {
-        font-size: 22px;
     }
 }

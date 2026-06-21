@@ -59,6 +59,7 @@ function todoList() {
             <button class="mark-btn ${tasks.completed}" id=${idx}><img src="/checkbox-icon.svg" alt="check"></button>
             <h5 class="${tasks.completed}">${tasks.task}<span class="${tasks.imp}">imp</span></h5>
             <div class="todoFunctionBtns">
+              <button id="menu-btn" id=${idx}><img src="/menu-icon.svg" alt="view"></button>
               <button class="view-btn" id=${idx}><img src="/details-icon.svg" alt="view"></button>
               <button class="edit-btn" id=${idx}><img src="/edit-icon.svg" alt="edit"></button>
               <button class="delete-btn" id=${idx}><img src="/delete-icon.svg" alt="delete"></button>
@@ -68,8 +69,12 @@ function todoList() {
 
         allTask.innerHTML = sum;
 
-        // for Edit Details...
+        // for Menu Btn...
+        let allMenuBtn = document.querySelectorAll("#menu-btn");
+        console.log(allMenuBtn);
+        
 
+        // for Edit Details...
         let allEditBtn = document.querySelectorAll(".edit-btn");
 
         allEditBtn.forEach((editBtn) => {
