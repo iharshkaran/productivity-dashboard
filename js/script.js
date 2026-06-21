@@ -46,12 +46,12 @@ function themeChange() {
         if (darkMode) {
             rootElement.style.setProperty("--blackBG", "white");
             rootElement.style.setProperty("--black", "white");
-            rootElement.style.setProperty("--white1", "black");
+            rootElement.style.setProperty("--white99", "black");
             darkMode = false;
         } else {
             rootElement.style.setProperty("--blackBG", "black");
             rootElement.style.setProperty("--black", "black");
-            rootElement.style.setProperty("--white1", "white");
+            rootElement.style.setProperty("--white99", "white");
             darkMode = true;
         }
 
