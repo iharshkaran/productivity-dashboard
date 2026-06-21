@@ -18,8 +18,6 @@ function openFeatures() {
     var cardPageBackBtn = document.querySelectorAll(".close-btn");
     var allCards = document.querySelector("section.allCards");
 
-    console.log(allCards)
-
     cards.forEach(function (card) {
         card.addEventListener("click", function () {
             cardPage[card.id].style.display = "block";

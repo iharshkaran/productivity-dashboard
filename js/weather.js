@@ -9,12 +9,8 @@ function weather() {
     let hero = document.querySelector(".hero");
 
 
-    navigator.geolocation.getCurrentPosition(
-
-        async (position) => {
-            const lat = position.coords.latitude;
-            const lon = position.coords.longitude;
-
+    
+        async function getWeather(lat,lon) {
             // Weather
             const urlForWeather =
                 `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,precipitation,wind_speed_10m,wind_direction_10m`;
@@ -80,8 +76,22 @@ function weather() {
                 || 'Your location';
 
             currentLocation.innerHTML = `${city}`;
-
         }
+
+    navigator.geolocation.getCurrentPosition(
+
+        async (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            
+            getWeather(lat,lon);
+        },
+
+        async (error) => {
+            getWeather(52.5200, 13.4050);
+            currentLocation.innerHTML = "Berlin";
+        }
+
     );
 
 }

@@ -4,9 +4,13 @@ section.todo-details-section{
     color: white;
     backdrop-filter: blur(8px);
     background: #000000cc;
-    
+
+    top: 2.5%;
+    left: 0%;
     width: 100%;
-    height: 100%;
+    height: 95%;
+
+    border-radius: 18px;
     
     display: flex;
     justify-content: center;

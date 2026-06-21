@@ -258,7 +258,7 @@ html {
         font-size: 18px;
     }
 
-    /*100 */
+    /*t0do */
     .todo-container {
         height: auto;
         margin-top: 2.5rem;
@@ -298,24 +298,57 @@ html {
     }
 
     .todo-container .allTask .task h5 {
-        width: 80%;
+        width: 70%;
         gap: 5px;
+        margin-left: 5px;
     }
 
+    .todo-container .allTask .task .todoFunctionBtns button,
     .todo-container .allTask .task button {
-        width: 2rem;
-        height: 2rem;
-
-        padding: 3px;
-        display: none;
-
+        width: 1.7rem;
+        height: 1.7rem;
+        padding: 1.9px;
         border-radius: 50px;
     }
 
-    #menu-btn {
-        display: initial;
+    .todo-container .allTask .task .todoFunctionBtns button img,
+    .todo-container .allTask .task button img {
+
+        width: 1.5rem;
+        height: 1.2rem;
     }
 
+    .todoFunctionBtns {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.todo-details-section {
+
+        position: absolute;
+
+        top: 0px;
+        left: 0px;
+
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+
+        width: 100%;
+        height: 100vh;
+    }
+
+    section.todo-details-section .todo-details-card {
+        top: 20%;
+        left: 20%;
+
+        width: 60%;
+        height: 60%;
+    }
 
     /* pomodoro */
     .pomodoro-container {
@@ -419,13 +452,14 @@ html {
     }
 
     .nav .circleBox {
-        width: 30%;
+        width: 25%;
     }
 
     .circle1,
     .circle2 {
         width: 34px;
         height: 34px;
+        box-shadow: none;
     }
 
     .circle1 img,
@@ -499,7 +533,7 @@ html {
         font-size: 18px;
     }
 
-    /*100 */
+    /*todo */
     .todo-container {
         margin-top: 2rem;
     }
@@ -535,6 +569,7 @@ html {
     }
 
     .todo-container .allTask .task {
+        position: relative;
         width: 100%;
         height: 50px;
 
@@ -544,28 +579,29 @@ html {
         padding: 6px 10px;
     }
 
-    .todo-container .allTask .task h5 {
-        width: 60%;
-        gap: 5px;
-    }
-
-    .todo-container .allTask .task button {
-        width: 2rem;
-        height: 2rem;
-
-        padding: 3px;
-        display: initial;
-
-        border-radius: 50px;
-    }
-
-    #menu-btn {
+    .todo-container .allTask .task .todoFunctionBtns button.edit-btn {
         display: none;
+    }
+
+    .todoFunctionBtns {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.todo-details-section .todo-details-card {
+        top: 20%;
+        left: 10%;
+
+        width: 80%;
+        height: 60%;
     }
 
 
     /* pomodoro */
-
     .sessionType {
         width: 35%;
         top: 33%;
@@ -590,8 +626,6 @@ html {
 
     /*  Daily Planner */
 
-
-
     .daily-planner .daily-planner-time {
         padding: 0px 10px;
         width: 100%;
@@ -615,6 +649,7 @@ html {
         width: 70%;
         padding: 22px;
     }
+
     .motivational-card img {
         top: -9%;
         right: 5%;
